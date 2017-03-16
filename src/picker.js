@@ -47,18 +47,19 @@ angular.module("ion-datetime-picker", ["ionic"])
             cssClass: 'ion-datetime-picker-popup',
             buttons: [
               {
-                text: $scope.buttonOk || $scope.i18n.ok,
-                type: $scope.i18n.okClass,
-                onTap: function() {
-                  $scope.commit();
-                }
-              }, {
                 text: $scope.buttonCancel || $scope.i18n.cancel,
                 type: $scope.i18n.cancelClass,
                 onTap: function() {
                   $timeout(function() {
                     $scope.processModel();
                   }, 200);
+                }
+              },
+              {
+                text: $scope.buttonOk || $scope.i18n.ok,
+                type: $scope.i18n.okClass,
+                onTap: function() {
+                  $scope.commit();
                 }
               }
             ]
